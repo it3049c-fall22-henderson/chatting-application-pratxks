@@ -10,6 +10,19 @@ load();
 updateMessages();
 setInterval(updateMessages, 10000);
 
+function load() {
+  Username = localStorage.getItem(`Username`);
+
+  if (Username == null || Username == ``) {
+    myMessage.disabled = true;
+    sendButton.disabled = true;
+  }
+  else
+  {
+    nameInput.value = Username;
+  }
+
+}
 
 async function fetchMessages() {
   const response = await fetch(serverURL);
