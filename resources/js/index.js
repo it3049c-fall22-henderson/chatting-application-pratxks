@@ -14,16 +14,6 @@ async function fetchMessages() {
   return await response.json();
 }
 
-async function updateMessages() {
-  // Fetch Messages
-  const messages = await fetchMessages();
-
-  // Loop over the messages. Inside the loop we will
-      // get each message
-      // format it
-      // add it to the chatbox
-}
-
 function sendMessages(username, text) {
   const newMessage = {
       sender: username,
@@ -84,7 +74,7 @@ async function updateMessages() {
 
   chatBox.innerHTML = formattedMessages;
 }
-}
+
 
 sendButton.addEventListener("click", function(sendButtonClickEvent) {
   sendButtonClickEvent.preventDefault();
