@@ -15,7 +15,7 @@ how many points out of 20 do you deserve on this assignment: I deserve 20 points
 <!-- Write your self-reflection under this line -->
 
 ### How long it took me to finish this? 
-It took me 1 day to finish this 
+It took me 1 day to finish this
 
 
 ## Discussion Questions:
