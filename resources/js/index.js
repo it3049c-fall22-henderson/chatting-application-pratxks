@@ -3,8 +3,10 @@ const myMessage = document.getElementById("my-message");
 const sendButton = document.getElementById("send-button");
 const chatBox = document.getElementById("chat");
 const serverURL = `https://it3049c-chat-application.herokuapp.com/messages`;
+const saveButton = document.getElementById(`save-button`);
+let Username;
 
-
+load();
 updateMessages();
 setInterval(updateMessages, 10000);
 
@@ -83,4 +85,14 @@ sendButton.addEventListener("click", function(sendButtonClickEvent) {
 
   sendMessages(sender,message);
   myMessage.value = "";
+});
+
+saveButton.addEventListener(`click`, function(saveButtonClickEvent) {
+  saveButtonClickEvent.preventDefault();
+  const name = nameInput.value;
+  
+  localStorage.setItem(`Username`, name);
+  myMessage.disabled = false;
+  sendButton.disabled = false;
+
 });
